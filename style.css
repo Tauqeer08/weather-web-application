@@ -1,0 +1,242 @@
+
+/* ================================
+   General
+================================ */
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e0f2fe, #f8fafc);
+    font-family: Arial, sans-serif;
+}
+
+
+/* ================================
+   Header
+================================ */
+
+header {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+header h1 {
+    color: #0f172a;
+}
+
+header p {
+    font-size: 14px;
+}
+
+
+/* ================================
+   Search
+================================ */
+
+#cityInput {
+    border-radius: 12px 0 0 12px;
+    border: 1px solid #cbd5e1;
+    padding: 12px 16px;
+}
+
+#cityInput:focus {
+    box-shadow: none;
+    border-color: #0d6efd;
+}
+
+#searchBtn {
+    border-radius: 0 12px 12px 0;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+#locationBtn {
+    border-radius: 10px;
+}
+
+
+/* ================================
+   Weather Card
+================================ */
+
+.card {
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+}
+
+#cityName {
+    font-size: 32px;
+    color: #0f172a;
+}
+
+#dateTime {
+    font-size: 14px;
+}
+
+#weatherIcon {
+    font-size: 70px;
+}
+
+#temperature {
+    color: #0f172a;
+    font-weight: 700;
+}
+
+#weatherCondition {
+    font-size: 18px;
+}
+
+
+/* ================================
+   Weather Details
+================================ */
+
+.border {
+    border-color: #e2e8f0 !important;
+}
+
+.border.rounded {
+    border-radius: 15px !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: #ffffff;
+}
+
+.border.rounded:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.border.rounded h6 {
+    font-size: 14px;
+}
+
+.border.rounded p {
+    color: #0f172a;
+}
+
+
+/* ================================
+   Forecast
+================================ */
+
+#forecastContainer {
+    min-height: 100px;
+}
+
+.forecast-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.forecast-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+}
+
+.forecast-card .forecast-icon {
+    font-size: 40px;
+}
+
+
+/* ================================
+   Error Message
+================================ */
+
+#errorMessage {
+    font-size: 14px;
+    min-height: 20px;
+}
+
+
+/* ================================
+   Footer
+================================ */
+
+footer {
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+
+/* ================================
+   Responsive Design
+================================ */
+
+@media (max-width: 768px) {
+
+    header .container > div {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    #cityName {
+        font-size: 26px;
+    }
+
+    #temperature {
+        font-size: 50px;
+    }
+
+    #weatherIcon {
+        font-size: 60px;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    main {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    #cityInput {
+        font-size: 14px;
+    }
+
+    #searchBtn {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .card-body {
+        padding: 20px !important;
+    }
+
+}
+/* ================================
+   Dynamic Weather Background
+================================ */
+
+body {
+    transition: background 0.5s ease;
+}
+
+body.clear-weather {
+    background: linear-gradient(135deg, #fde68a, #bfdbfe);
+}
+
+body.cloudy-weather {
+    background: linear-gradient(135deg, #cbd5e1, #f1f5f9);
+}
+
+body.rain-weather {
+    background: linear-gradient(135deg, #94a3b8, #dbeafe);
+}
+
+body.storm-weather {
+    background: linear-gradient(135deg, #475569, #94a3b8);
+}
+
+body.snow-weather {
+    background: linear-gradient(135deg, #e0f2fe, #f8fafc);
+}
+
+body.fog-weather {
+    background: linear-gradient(135deg, #cbd5e1, #f8fafc);
+}
